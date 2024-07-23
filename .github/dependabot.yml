@@ -4,21 +4,10 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    applies-to: "security-updates"
-    directories:
-      - "/"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "npm"
-    applies-to: "version-updates"
-    directories:
-      - "*"
+    directory: "/"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 50
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
