@@ -4,7 +4,6 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    applies-to: "version-updates"
     directory: "/"
     schedule:
       interval: "daily"
