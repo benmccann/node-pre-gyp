@@ -4,15 +4,19 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
+    applies-to: "security-updates"
     directory: "/"
     schedule:
       interval: "daily"
-    open-pull-requests-limit: 100
-  - package-ecosystem: github-actions
-    directory: /
-    groups:
-      github-actions:
-        patterns:
-          - "*"  # Group all Actions updates into a single larger pull request
+  - package-ecosystem: "npm"
+    applies-to: "version-updates"
+    directory: "/"
     schedule:
-      interval: weekly
+      interval: "daily"
+    open-pull-requests-limit: 50
+    ignore:
+      update-types: ["version-update:semver-minor", "version-update:semver-patch"]
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
