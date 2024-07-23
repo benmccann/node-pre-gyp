@@ -4,11 +4,6 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    applies-to: "security-updates"
-    directory: "/"
-    schedule:
-      interval: "daily"
-  - package-ecosystem: "npm"
     applies-to: "version-updates"
     directory: "/"
     schedule:
