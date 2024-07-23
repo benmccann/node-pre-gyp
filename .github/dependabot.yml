@@ -1,13 +1,24 @@
-# For all possible configuration options, see
+# For all possible configuration options see:
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/"
+    applies-to: "security-updates"
+    directories:
+      - "/"
     schedule:
       interval: "daily"
-    open-pull-requests-limit: 0
+  - package-ecosystem: "npm"
+    applies-to: "version-updates"
+    directories:
+      - "*"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 50
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-minor", "version-update:semver-patch"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
