@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@sveltejs/kit": "^2.0.0",
-    "@zowe/cli": "^7.20.0",
+    "@zowe/cli": "^8.0.0",
     "detect-libc": "^2.0.0",
     "https-proxy-agent": "^5.0.0",
     "make-dir": "^3.1.0",
